@@ -19,10 +19,12 @@ var cache = (function () {
 
   return {
     getInstance: function() {
-      //Review comment - Missed the null check
       instance = create();
       /*if(!instance) {
         instance = create();
+      }
+      else {
+        console.log('returning existing instance');
       }
       return instance;*/
     }
@@ -37,4 +39,5 @@ var cache = (function () {
 })();
 
 var globalCache = cache.getInstance(); 
-//var anotherGlobalCache = cache.getInstance();
+var anotherGlobalCache = cache.getInstance();
+var yetAnotherGlobalCache = cache.getInstance();
